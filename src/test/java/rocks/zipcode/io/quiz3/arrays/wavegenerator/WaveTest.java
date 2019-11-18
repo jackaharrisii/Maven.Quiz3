@@ -1,5 +1,6 @@
 package rocks.zipcode.io.quiz3.arrays.wavegenerator;
 
+import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcode.io.quiz3.utils.TestUtils;
 import rocks.zipcode.io.quiz3.arrays.WaveGenerator;
@@ -208,5 +209,12 @@ public class WaveTest {
 
         // then
         TestUtils.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountLetters() {
+        String input = "the blue dog!!";
+        Integer expected = 10;
+        Assert.assertEquals(expected, WaveGenerator.countLetters(input));
     }
 }
